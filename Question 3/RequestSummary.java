@@ -1,4 +1,4 @@
-package ques4;
+package com.example.summary;
 
 import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.io.Text;
