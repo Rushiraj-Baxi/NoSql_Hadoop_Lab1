@@ -1,0 +1,55 @@
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Autoformfill Tests</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container-fluid">
+        <h1 class="text-center">Auto FormFill Tests</h1>
+<div class="col-sm-4">
+                <div class="container-fluid">
+                    <div class="well">
+                        <h3 class="text-center">Generic Text Test</h3>
+                        <p>The search button data should never be saved and autofilled All the other fields should be saved and autofilled</p>
+                        <p>The One Time password field should not be saved nor autofilled as its autocomplete is off</p>
+                        <form id="generictextform" method="get" autocomplete="on">
+                            <div class="form-group">
+                                <label for="search">Search:</label>
+                                <input name="search" value="" class="form-control" id="search" type="search">
+                                
+                                <label for="pan">Pan:</label>
+                                <input name="pan" value="" class="form-control" id="pan" type="text" placeholder="Enter your PAN number">
+
+                                <label for="complaint-number">Complaint Number:</label>
+                                <input name="complaint-number" value="" class="form-control" id="complaint-number" type="number">
+
+                                <label for="complaint-date">Complaint Date:</label>
+                                <input name="complaint-date" value="" class="form-control" id="complaint-date" type="text">
+
+                                <label for="complaint-text">Complaint Text:</label>
+                                <input name="complaint-text" value="" class="form-control" id="complaint-text" type="text" placeholder="Enter complaint">
+
+                                <label for="one-time-password">One Time Password:</label>
+                                <input name="one-time-password" value="" class="form-control" id="one-time-password" type="text" placeholder="One time Password" autocomplete="off">
+
+                            </div>
+                            <button type="submit" class="form-control btn btn-primary">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+</div>
+	<script type="module">
+		const submit = document.querySelector("#form-submit")
+         
+        submit.addEventListener("click", maybePreventDefault)
+         
+         function maybePreventDefault(e) {
+             e.preventDefault()
+         }
+      </script>
+</body>
+</html>
